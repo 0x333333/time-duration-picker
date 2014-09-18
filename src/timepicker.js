@@ -57,12 +57,6 @@ angular.module('ez.timepicker', [])
         days : 0
       };
 
-      // // Set style for each column
-      // var cols = _element.find('.col');
-      // cols.each(function(i) {
-      //   cols[i].style.width = 100/cols.length + '%';
-      // });
-
       scope.preventDefault = function(e) {
         e.preventDefault();
         e.stopPropagation();
