@@ -34,7 +34,6 @@ angular.module('ez.timepicker', [])
       _scope = scope;
       _element = element;
       _attrs = attrs;
-      console.log(attrs);
       scope.yearStep            = parseInt(attrs.yearStep, 1) || TimepickerConfig.yearStep;
       scope.monthStep           = parseInt(attrs.monthStep, 1) || TimepickerConfig.monthStep;
       scope.dayStep             = parseInt(attrs.dayStep, 1) || TimepickerConfig.dayStep;
