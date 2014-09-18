@@ -1,0 +1,30 @@
+.ez-timepicker-container .col {
+  text-align: center;
+  padding: 0 !important;
+  width: 30px !important;
+}
+.ez-timepicker-container .col a {
+  color: #000;
+  font-size: 18px;
+  width: 100%;
+  display: block;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.ez-timepicker-container .col a:hover {
+  border: solid 1px #ccc;
+  background-color: #eee;
+}
+.ez-timepicker-container .col a i {
+  padding: 0;
+}
+.ez-timepicker-container .col div:nth-child(2) {
+  margin: 2px 0;
+  font-size: 16px;
+}
+.ez-timepicker-container .dropdown-menu {
+  min-width: initial;
+  width: initial !important;
+  padding: 5px;
+}
