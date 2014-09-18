@@ -1,6 +1,7 @@
 .ez-timepicker-container .col {
   text-align: center;
   padding: 0 !important;
+  float: left;
   width: 30px !important;
 }
 .ez-timepicker-container .col a {
@@ -18,6 +19,25 @@
 }
 .ez-timepicker-container .col a i {
   padding: 0;
+}
+.ez-timepicker-container .col .button {
+  display: inline-block;
+  padding: 6px 0px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 .ez-timepicker-container .col div:nth-child(2) {
   margin: 2px 0;

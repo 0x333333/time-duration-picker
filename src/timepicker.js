@@ -1,6 +1,6 @@
 angular.module('ez.timepicker', [])
 
-.constant('EzTimepickerConfig', {
+.constant('TimepickerConfig', {
   yearStep            : 1,
   monthStep           : 1,
   dayStep             : 1,
@@ -20,7 +20,7 @@ angular.module('ez.timepicker', [])
   decIconClass        : 'icon-chevron-down'
 })
 
-.directive('ezTimepicker', ['EzTimepickerConfig', function(EzTimepickerConfig) {
+.directive('ezTimepicker', ['TimepickerConfig', function(TimepickerConfig) {
   return {
     restrict: 'EA',
     replace: true,
@@ -35,23 +35,23 @@ angular.module('ez.timepicker', [])
       _element = element;
       _attrs = attrs;
       console.log(attrs);
-      scope.yearStep            = parseInt(attrs.yearStep, 1) || EzTimepickerConfig.yearStep;
-      scope.monthStep           = parseInt(attrs.monthStep, 1) || EzTimepickerConfig.monthStep;
-      scope.dayStep             = parseInt(attrs.dayStep, 1) || EzTimepickerConfig.dayStep;
-      scope.hourStep            = parseInt(attrs.hourStep, 1) || EzTimepickerConfig.hourStep;
-      scope.minuteStep          = parseInt(attrs.minuteStep, 1) || EzTimepickerConfig.minuteStep;
-      scope.secondStep          = parseInt(attrs.secondStep, 1) || EzTimepickerConfig.secondStep;
-      scope.showYear            = scope.$eval(attrs.showYear || EzTimepickerConfig.showYear);
-      scope.showMonth           = scope.$eval(attrs.showMonth || EzTimepickerConfig.showMonth);
-      scope.showDay             = scope.$eval(attrs.showDay || EzTimepickerConfig.showDay);
-      scope.showHour            = scope.$eval(attrs.showHour || EzTimepickerConfig.showHour);
-      scope.showMinute          = scope.$eval(attrs.showMinute || EzTimepickerConfig.showMinute);
-      scope.showSecond          = scope.$eval(attrs.showSecond || EzTimepickerConfig.showSecond);
-      scope.showMeridian        = scope.$eval(attrs.showMeridian || EzTimepickerConfig.showMeridian);
-      scope.meridians           = attrs.meridians || EzTimepickerConfig.meridians;
-      scope.inputContainerClass = attrs.inputContainerClass || EzTimepickerConfig.inputContainerClass;
-      scope.incIconClass        = attrs.incIconClass || EzTimepickerConfig.incIconClass;
-      scope.decIconClass        = attrs.decIconClass || EzTimepickerConfig.decIconClass;
+      scope.yearStep            = parseInt(attrs.yearStep, 1) || TimepickerConfig.yearStep;
+      scope.monthStep           = parseInt(attrs.monthStep, 1) || TimepickerConfig.monthStep;
+      scope.dayStep             = parseInt(attrs.dayStep, 1) || TimepickerConfig.dayStep;
+      scope.hourStep            = parseInt(attrs.hourStep, 1) || TimepickerConfig.hourStep;
+      scope.minuteStep          = parseInt(attrs.minuteStep, 1) || TimepickerConfig.minuteStep;
+      scope.secondStep          = parseInt(attrs.secondStep, 1) || TimepickerConfig.secondStep;
+      scope.showYear            = scope.$eval(attrs.showYear || TimepickerConfig.showYear);
+      scope.showMonth           = scope.$eval(attrs.showMonth || TimepickerConfig.showMonth);
+      scope.showDay             = scope.$eval(attrs.showDay || TimepickerConfig.showDay);
+      scope.showHour            = scope.$eval(attrs.showHour || TimepickerConfig.showHour);
+      scope.showMinute          = scope.$eval(attrs.showMinute || TimepickerConfig.showMinute);
+      scope.showSecond          = scope.$eval(attrs.showSecond || TimepickerConfig.showSecond);
+      scope.showMeridian        = scope.$eval(attrs.showMeridian || TimepickerConfig.showMeridian);
+      scope.meridians           = attrs.meridians || TimepickerConfig.meridians;
+      scope.inputContainerClass = attrs.inputContainerClass || TimepickerConfig.inputContainerClass;
+      scope.incIconClass        = attrs.incIconClass || TimepickerConfig.incIconClass;
+      scope.decIconClass        = attrs.decIconClass || TimepickerConfig.decIconClass;
       scope.widget              = {
         years : 0,
         months : 0,
@@ -415,10 +415,8 @@ angular.module('ez.timepicker', [])
 }])
 
 
-.run(['$templateCache', 'EzTimepickerConfig', function($templateCache, EzTimepickerConfig) {
+.run(['$templateCache', function($templateCache) {
   'use strict';
-
-  // console.log('EzTimepickerConfig', EzTimepickerConfig);
 
   $templateCache.put('ez-timepicker.html',
     "<div class=\"dropdown ez-timepicker-container\">\n" +
