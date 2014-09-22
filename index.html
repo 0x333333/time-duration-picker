@@ -17,9 +17,6 @@
   	angular.module('myApp', ['ez.timepicker', 'ui.bootstrap'])
 		.controller('RootCtrl', ['$scope', function($scope) {
 		 	$scope.data = '21:43:55';
-		 	$scope.doSth = function() {
-		 		$scope.data = '12:34:56';
-		 	};
 		 }
 		]);
   </script>
@@ -28,17 +25,14 @@
 <body ng-app="myApp" ng-controller="RootCtrl">
 	<input
 		ez-timepicker       = "data"
-		ng-model            = "data"
-		ng-change           = "doSth()"
 		show-meridian       = "false"
 		show-year           = "true"
-		show-month          = "false"
-		show-day            = "false"
+		show-month          = "true"
+		show-day            = "true"
 		data-inc-icon-class = "fa fa-chevron-up"
 		data-dec-icon-class = "fa fa-chevron-down"
 	/>
 
-	<button ng-click="doSth()">Click</button>
 </body>
 
 </html>
