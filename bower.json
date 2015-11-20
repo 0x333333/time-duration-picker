@@ -1,0 +1,34 @@
+{
+  "name": "time-duration-picker",
+  "homepage": "https://github.com/zp-j/time-duration-picker",
+  "authors": [
+    "Zhipeng Jiang <jesusjzp@gmail.com>"
+  ],
+  "description": "Plugin for selecting a time duration",
+  "main": "src/timepicker.js",
+  "moduleType": [],
+  "keywords": [
+    "angularjs",
+    "timepicker",
+    "time",
+    "duration",
+    "period"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo*",
+    "package.json"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.7",
+    "angular-ui-bootstrap": "~0.14.3",
+    "font-awesome": "~4.4.0",
+    "bootstrap": "~3.3.5"
+  }
+}
